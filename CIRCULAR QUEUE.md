@@ -1,68 +1,45 @@
-# Exp No: 14b  
-## Circular Queue 
+
+# Exp.No:14c  
+## DEQUE - INSERTION
+
 ---
 
 ### AIM  
-To write a Python program with a function to insert float values into a Circular Queue.
+To write a Python program to insert elements at REAR END of deque using a collection built-in function.
 
 ---
 
-### ALGORITHM
+### ALGORITHM  
 
-1. Start  
-2. Check if the Circular Queue is full  
-   - If `size == max_size`, print `"Queue is full"` and exit the function  
-3. If the queue is not full:  
-   - Read the element to be inserted  
-   - Convert it to float  
-   - Insert the element at the `tail` position  
-   - Update tail using: `tail = (tail + 1) % max_size` (circular increment)  
-   - Increment `size` by 1  
-4. End
+1. Import the `deque` class from the `collections` module.  
+2. Initialize an empty deque.  
+3. Start an infinite loop using `while True`.  
+4. In each iteration, take input from the user.  
+5. If the input is an empty string, break the loop.  
+6. If the input is not empty, convert it to an integer and append it to the deque.  
+7. After the loop ends, append the values `14` and `15` to the deque.  
+8. Print the message `"The deque after appending at right is :"`.  
+9. Print the contents of the deque.  
 
 ---
 
-### PROGRAM
+### PROGRAM  
 
 ```python
-class Queue:
-    def __init__(self, size):
-        self.items = [0] * size
-        self.max_size = size
-        self.head, self.tail, self.size = 0, 0, 0
-    def enqueue(self, item):
-        if self.is_list_full():
-            print("Queue is full")
-            return
-        self.items[self.tail]=item
-        self.tail=(self.tail+1)%self.max_size
-        self.size+=1
-    def dequeue(self):
-        item=self.items[self.head]
-        self.head=(self.head+1)%self.max_size
-        self.item-=1
-        return item
-    def is_list_full(self):
-        if self.size==self.max_size:
-            return True
-        return False
-    def is_empty(self):
-        if self.size==0:
-            return True
-        return False
-size=int(input())
-q=Queue(size)
-str=float(input())
-str1=float(input())
-str2=float(input())
-q.enqueue(str)
-q.enqueue(str1)
-q.enqueue(str2)
-print(q.items)
+import collections
+a=input()
+b=input()
+c=input()
+de=collections.deque([a,b,c])
+de.append('h')
+de.append('o')
+de.append('n')
+print("The deque after appending at right is :")
+print(de)
 ```
 
 ### OUTPUT
-<img width="1185" height="379" alt="image" src="https://github.com/user-attachments/assets/04681e57-4916-48e0-8fe3-71b0e8efd1ec" />
+<img width="1185" height="243" alt="image" src="https://github.com/user-attachments/assets/8a923eca-472d-427e-a4fa-9a8e30e28064" />
 
 ### RESULT
-Therefore, the output is the example to write a Python program with a function to insert float values into a Circular Queue.
+Therefore, the output is the example to write a Python program to insert elements at REAR END of deque using a collection built-in function.
